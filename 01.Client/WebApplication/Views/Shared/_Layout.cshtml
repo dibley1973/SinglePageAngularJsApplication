@@ -1,17 +1,18 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>_Layout</title>
+  <meta charset="utf-8" />
+  <title>Single Page Angular JS Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @Styles.Render(StyleBundlePaths.JQueryMobile)
+  @Scripts.Render(ScriptBundlePaths.Modernizer)
 </head>
 <body>
-    <div> 
-    </div>
+  <div>
+  </div>
+
+  @Scripts.Render(ScriptBundlePaths.JQuery)
+  @Scripts.Render(ScriptBundlePaths.JQueryMobile)
+  @RenderSection("Scripts", required: false)
 </body>
 </html>
