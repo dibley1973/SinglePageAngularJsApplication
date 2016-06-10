@@ -7,6 +7,17 @@ namespace WebApplication
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
+            RegisterScriptBundles(bundles);
+            RegisterStyleBundles(bundles);
+        }
+
+        private static void RegisterScriptBundles(BundleCollection bundles)
+        {
+            bundles.Add(new ScriptBundle(ScriptBundlePaths.App)
+                .Include(
+                    "~/Scripts/App/"
+                ));
+
             bundles.Add(new ScriptBundle(ScriptBundlePaths.Angular)
                 .Include(
                     "~/Scripts/Lib/Angular/angular.*"
@@ -21,18 +32,26 @@ namespace WebApplication
 
             bundles.Add(new ScriptBundle(ScriptBundlePaths.JQueryMobile)
                 .Include(
-                    "~/Scripts/Lib/JQueryMobile*.*"
+                    "~/Scripts/Lib/JQueryMobile/jquery.mobile*"
                 ));
 
-            bundles.Add(new ScriptBundle(ScriptBundlePaths.Modernizer)
+            bundles.Add(new ScriptBundle(ScriptBundlePaths.Modernizr)
                 .Include(
                     "~/Scripts/modernizr-*"
                 ));
+        }
 
+        private static void RegisterStyleBundles(BundleCollection bundles)
+        {
             bundles.Add(new StyleBundle(StyleBundlePaths.JQueryMobile)
                 .Include(
-                    "~/Content/Lib/JQueryMobile/jquery.mobile.*.css"
-             ));
+                    "~/Content/Lib/JQueryMobile/jquery.mobile*"
+                ));
+
+            bundles.Add(new StyleBundle(StyleBundlePaths.Reset)
+                .Include(
+                    "~/Content/Lib/Reset/reset.css"
+                ));
         }
     }
 }

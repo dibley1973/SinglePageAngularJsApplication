@@ -312,7 +312,9 @@
     <Content Include="Content\Lib\JQueryMobile\jquery.mobile.structure-1.4.5.min.css" />
     <Content Include="Content\Lib\JQueryMobile\jquery.mobile.theme-1.4.5.css" />
     <Content Include="Content\Lib\JQueryMobile\jquery.mobile.theme-1.4.5.min.css" />
+    <Content Include="Content\Lib\Reset\reset.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\Lib\Angular\angular.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js.map" />
@@ -322,7 +324,7 @@
     <Content Include="Scripts\Lib\JQuery\jquery-1.8.0.min.js" />
     <Content Include="Scripts\Lib\JQueryMobile\jquery.mobile-1.4.5.js" />
     <Content Include="Scripts\Lib\JQueryMobile\jquery.mobile-1.4.5.min.js" />
-    <Content Include="Scripts\Lib\Modernizer\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Lib\Modernizr\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Lib\JQueryMobile\jquery.mobile-1.4.5.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -342,6 +344,8 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\_Home.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -353,8 +357,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\App\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\App\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
