@@ -1,30 +1,30 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Single Page Angular JS Application</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @Styles.Render(StyleBundlePaths.JQueryMobile)
-    @Scripts.Render(ScriptBundlePaths.Modernizr)
-  </head>
-  <body>
-    <div data-role="page">
-      <header data-role="header">
-        <h1>Page Header</h1>
-      </header>
+<html lang="en" ng-app="templateApp">
+<head>
+  <meta charset="utf-8" />
+  <title>Single Page Angular JS Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @Styles.Render(StyleBundlePaths.JQueryMobile)
+  @Scripts.Render(ScriptBundlePaths.Modernizr)
+</head>
+<body>
+  <div data-role="page">
+    <header data-role="header">
+      <h1>Page Header</h1>
+    </header>
 
-      <div role="main" class="ui-content">
-        <section>
-          @RenderSection("SPAViews", required: false)
-        </section>    
-      </div>
-
-      <footer data-role="footer">
-        <h4>&copy; @DateTime.Now.Year - My ASP.NET Application</h4>
-      </footer>
+    <div role="main" class="ui-content">
+      <section>
+        @RenderSection("SPAViews", required: false)
+      </section>
     </div>
-    @Scripts.Render(ScriptBundlePaths.JQuery)
-    @Scripts.Render(ScriptBundlePaths.JQueryMobile)
-    @RenderSection("Scripts", required: false)
+
+    <footer data-role="footer">
+      <h4>&copy; @DateTime.Now.Year - My ASP.NET Application</h4>
+    </footer>
+  </div>
+  @Scripts.Render(ScriptBundlePaths.JQuery)
+  @Scripts.Render(ScriptBundlePaths.JQueryMobile)
+  @RenderSection("Scripts", required: false)
 </body>
 </html>

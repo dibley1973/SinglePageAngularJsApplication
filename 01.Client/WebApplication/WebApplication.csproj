@@ -315,6 +315,7 @@
     <Content Include="Content\Lib\Reset\reset.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\App\app.js" />
+    <Content Include="Scripts\App\Controllers\AutomobileController.js" />
     <Content Include="Scripts\Lib\Angular\angular.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js.map" />

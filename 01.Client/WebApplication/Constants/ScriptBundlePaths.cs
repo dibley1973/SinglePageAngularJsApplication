@@ -8,5 +8,6 @@ namespace WebApplication.Constants
         public const string JQuery = @"~/Scripts/JQuery";
         public const string JQueryMobile = @"~/Scripts/JQueryMobile";
         public const string Modernizr = @"~/Scripts/Modernizr";
+        public const string HomePage = @"~/Scripts/HomePage";
     }
 }

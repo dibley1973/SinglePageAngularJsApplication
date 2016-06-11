@@ -15,7 +15,7 @@ namespace WebApplication
         {
             bundles.Add(new ScriptBundle(ScriptBundlePaths.App)
                 .Include(
-                    "~/Scripts/App/"
+                    "~/Scripts/App/app.js"
                 ));
 
             bundles.Add(new ScriptBundle(ScriptBundlePaths.Angular)
@@ -38,6 +38,11 @@ namespace WebApplication
             bundles.Add(new ScriptBundle(ScriptBundlePaths.Modernizr)
                 .Include(
                     "~/Scripts/modernizr-*"
+                ));
+
+            bundles.Add(new ScriptBundle(ScriptBundlePaths.HomePage)
+                .Include(
+                    "~/Scripts/App/Controllers/AutomobileController.js"
                 ));
         }
 
