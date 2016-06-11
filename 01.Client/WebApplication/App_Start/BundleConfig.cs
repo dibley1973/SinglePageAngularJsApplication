@@ -57,6 +57,12 @@ namespace WebApplication
                 .Include(
                     "~/Content/Lib/Reset/reset.css"
                 ));
+
+            bundles.Add(new StyleBundle(StyleBundlePaths.App)
+                .Include(
+                    "~/Content/App/angular.css",
+                    "~/Content/App/app.css"
+                ));
         }
     }
 }

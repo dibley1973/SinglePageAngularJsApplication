@@ -97,6 +97,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\App\angular.css" />
+    <Content Include="Content\App\app.css" />
     <Content Include="Content\Lib\JQueryMobile\images\ajax-loader.gif" />
     <Content Include="Content\Lib\JQueryMobile\images\icons-png\action-black.png" />
     <Content Include="Content\Lib\JQueryMobile\images\icons-png\action-white.png" />
@@ -356,7 +358,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\App\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

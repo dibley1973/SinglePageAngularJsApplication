@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @Styles.Render(StyleBundlePaths.JQueryMobile)
   @Scripts.Render(ScriptBundlePaths.Modernizr)
+  @Styles.Render(StyleBundlePaths.App)
 </head>
-<body>
+<body ngCloak>
   <div data-role="page">
     <header data-role="header">
       <h1>Page Header</h1>
