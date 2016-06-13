@@ -318,6 +318,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\Controllers\AutomobileController.js" />
+    <Content Include="Scripts\App\Controllers\AutomobileEditController.js" />
     <Content Include="Scripts\Lib\Angular\angular.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js.map" />
@@ -349,6 +350,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\_Home.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

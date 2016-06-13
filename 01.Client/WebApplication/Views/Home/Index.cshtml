@@ -1,8 +1,47 @@
-﻿@section SPAViews {
-  @Html.Partial("_Home")
+﻿@section Page {
+  @*@Html.Partial("_Home")*@
+  <div id="car-list" data-role="page" ng-controller="AutomobileController">
+    <header data-role="header">
+      <h1>Cars</h1>
+      <a href="#car-detail" ng-click="newCar()" data-icon="add" class="ui-btn-right">New</a>
+    </header>
+
+    <div data-role="content" class="ui-content">
+      <ul ng-controller="AutomobileController" data-role="listview">
+        <li ng-repeat="car in cars">
+          <a href="#car-list" ng-click="selectCar(car)">
+            <h4>{{car.make}} - {{car.model}}</h4>
+            <span>{{car.year}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    @Html.Partial("_Footer")
+  </div>
+
+  <div id="car-detail" data-role="page" ng-controller="AutomobileEditController">
+    <header data-role="header">
+      <a href="#" data-icon="back" data-rel="back">Back</a>
+      <h1>{{car.make}} - {{car.model}}</h1>
+      <a href="#car-list" ng-click="saveCar()" data-icon="check" class="ui-btn-right">Save</a>
+    </header>
+
+    <div data-role="content" class="ui-content">
+      <ul data-role="listview" data-inset="true">
+        <li data-role="fieldcontain">
+          <label for="description">Make</label>
+          <input id="description" type="text" ng-model="car.make"/>
+        </li>
+      </ul>
+      <button data-inline="true" onclick=" $.mobile.changePage('#car-list') " ng-click="completeCar(car.id)">
+        Save Car
+      </button>
+    </div>
+    @Html.Partial("_Footer")
+  </div>
 }
+
 @section Scripts {
-  @Scripts.Render(ScriptBundlePaths.Angular)
-  @Scripts.Render(ScriptBundlePaths.App)
   @Scripts.Render(ScriptBundlePaths.HomePage)
 }
