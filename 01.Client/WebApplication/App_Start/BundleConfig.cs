@@ -42,7 +42,8 @@ namespace WebApplication
 
             bundles.Add(new ScriptBundle(ScriptBundlePaths.HomePage)
                 .Include(
-                    "~/Scripts/App/Controllers/AutomobileController.js"
+                    "~/Scripts/App/Controllers/AutomobileController.js",
+                    "~/Scripts/App/Controllers/AutomobileEditController.js"
                 ));
         }
 

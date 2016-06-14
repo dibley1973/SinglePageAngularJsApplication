@@ -20,4 +20,15 @@ templateApp.controller('AutomobileController',
                 trim: 'L'
             }
         ];
+        $scope.addCar = function () {
+            var car = {
+                id: 1,
+                make: 'Make',
+                model: 'Model',
+                year: '2000',
+                doors: '2',
+                trim: ''
+            }
+            $scope.cars.push(car);
+        }
     });
