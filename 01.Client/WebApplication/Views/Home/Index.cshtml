@@ -3,7 +3,7 @@
   <div id="car-list" data-role="page" ng-controller="AutomobileController">
     <header data-role="header">
       <h1>Cars</h1>
-      <a href="#car-detail" ng-click="newCar()" data-icon="add" class="ui-btn-right">New</a>
+      <a href="#car-detail" ng-click="addCar()" data-icon="add" class="ui-btn-right">New</a>
     </header>
 
     <div data-role="content" class="ui-content">
@@ -28,34 +28,36 @@
   </header>
 
   <div data-role="content" class="ui-content">
-    <ul data-role="listview" data-inset="true">
-      <li data-role="fieldcontain">
-        <label for="make">Make</label>
-        <input id="make" type="text" ng-model="car.make" placeholder="Make" />
-      </li>
-      <li data-role="fieldcontain">
-        <label for="model">Model</label>
-        <input id="model" type="text" ng-model="car.model" placeholder="Make" />
-      </li>
-      <li data-role="fieldcontain">
-        <label for="year">Year</label>
-        <input id="year" type="number" ng-model="car.year" min="1900" max="2020" />
-      </li>
-      <li data-role="fieldcontain">
-        <label for="doors">Doors</label>
-        <input id="doors" type="number" ng-model="car.doors" min="2" max="7" />
-      </li>
-      <li>
-        <label for="trim">Trim</label>
-        <input id="trim" type="text" ng-model="car.trim" />
-      </li>
-    </ul>
-    <button data-inline="true" ng-click="completeCar(car)">
-      Save Car
-    </button>
-    <button data-inline="true" ng-click="cancelCar()">
-      Cancel
-    </button>
+    <form>
+      <ul data-role="listview" data-inset="true">
+        <li data-role="fieldcontain">
+          <label for="make">Make</label>
+          <input id="make" type="text" ng-model="car.make" required placeholder="Make" />
+        </li>
+        <li data-role="fieldcontain">
+          <label for="model">Model</label>
+          <input id="model" type="text" ng-model="car.model" placeholder="Make" />
+        </li>
+        <li data-role="fieldcontain">
+          <label for="year">Year</label>
+          <input id="year" type="number" ng-model="car.year" min="1900" max="2020" />
+        </li>
+        <li data-role="fieldcontain">
+          <label for="doors">Doors</label>
+          <input id="doors" type="number" ng-model="car.doors" min="2" max="7" />
+        </li>
+        <li>
+          <label for="trim">Trim</label>
+          <input id="trim" type="text" ng-model="car.trim" />
+        </li>
+      </ul>
+      <button data-inline="true" ng-click="completeCar(car)">
+        Save Car
+      </button>
+      <button data-inline="true" ng-click="cancelCar()">
+        Cancel
+      </button>
+    </form>
   </div>
   @Html.Partial("_Footer")
 </div>

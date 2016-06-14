@@ -20,7 +20,7 @@ templateApp.controller('AutomobileController',
                 trim: 'L'
             }
         ];
-        $scope.addCar = function () {
+        $scope.addCar = function() {
             var car = {
                 id: 1,
                 make: 'Make',
@@ -30,5 +30,8 @@ templateApp.controller('AutomobileController',
                 trim: ''
             }
             $scope.cars.push(car);
+        };
+        $scope.selectCar = function (car) {
+            $.mobile.changePage('#car-list');
         }
     });
