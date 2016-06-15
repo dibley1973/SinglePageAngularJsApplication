@@ -28,7 +28,7 @@
   </header>
 
   <div data-role="content" class="ui-content">
-    <form>
+    <form name="newCarForm">
       <ul data-role="listview" data-inset="true">
         <li data-role="fieldcontain">
           <label for="make">Make</label>
@@ -36,22 +36,22 @@
         </li>
         <li data-role="fieldcontain">
           <label for="model">Model</label>
-          <input id="model" type="text" ng-model="car.model" placeholder="Make" />
+          <input id="model" type="text" ng-model="car.model" required placeholder="Make" />
         </li>
         <li data-role="fieldcontain">
           <label for="year">Year</label>
-          <input id="year" type="number" ng-model="car.year" min="1900" max="2020" />
+          <input id="year" type="number" ng-model="car.year" required min="1900" max="2020" />
         </li>
         <li data-role="fieldcontain">
           <label for="doors">Doors</label>
-          <input id="doors" type="number" ng-model="car.doors" min="2" max="7" />
+          <input id="doors" type="number" ng-model="car.doors" required min="2" max="7" />
         </li>
         <li>
           <label for="trim">Trim</label>
-          <input id="trim" type="text" ng-model="car.trim" />
+          <input id="trim" type="text" ng-model="car.trim" placeholder="Trim" />
         </li>
       </ul>
-      <button data-inline="true" ng-click="completeCar(car)">
+      <button data-inline="true" ng-disabled="newCarForm.$invalid" ng-click="completeCar(car, newCarForm)">
         Save Car
       </button>
       <button data-inline="true" ng-click="cancelCar()">
