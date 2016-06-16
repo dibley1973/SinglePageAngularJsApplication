@@ -319,6 +319,7 @@
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\Controllers\AutomobileController.js" />
     <Content Include="Scripts\App\Controllers\AutomobileEditController.js" />
+    <Content Include="Scripts\App\Services\AutomobileService.js" />
     <Content Include="Scripts\Lib\Angular\angular.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js.map" />
