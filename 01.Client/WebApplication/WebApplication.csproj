@@ -44,8 +44,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -336,6 +336,7 @@
     <Content Include="Scripts\Lib\Angular\angular.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js" />
     <Content Include="Scripts\Lib\Angular\angular.min.js.map" />
+    <Content Include="App_Data\cars.json" />
     <None Include="Scripts\Lib\JQuery\jquery-1.8.0.intellisense.js" />
     <Content Include="Scripts\Lib\Angular\angular-mocks.js" />
     <Content Include="Scripts\Lib\JQuery\jquery-1.8.0.js" />
@@ -343,7 +344,9 @@
     <Content Include="Scripts\Lib\JQueryMobile\jquery.mobile-1.4.5.js" />
     <Content Include="Scripts\Lib\JQueryMobile\jquery.mobile-1.4.5.min.js" />
     <Content Include="Scripts\Lib\Modernizr\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\Lib\JQueryMobile\jquery.mobile-1.4.5.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -354,7 +357,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Constants\ScriptBundlePaths.cs" />
     <Compile Include="Constants\StyleBundlePaths.cs" />
-    <Compile Include="Controllers\CarApiController.cs" />
+    <Compile Include="Controllers\Api\CarController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -375,7 +378,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

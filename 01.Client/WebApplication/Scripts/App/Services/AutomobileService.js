@@ -4,7 +4,7 @@
             $http(
             {
                 method: 'GET',
-                url: '/data/GetCars'
+                url: 'api/Car/Get'
             })
             .success(function (data, status, headers, config) {
                 successCallback(data);
